@@ -36,7 +36,7 @@ data:                  # Data settings
   # ---
   timing_random_offset: 2
   src_seq_len: 4096
-  tgt_seq_len: 8192
+  tgt_seq_len: 16384
   rhythm_weight: 1.0    # Weight of rhythm tokens in the loss calculation
   context_types:       # List of context types to include in the dataset
     - "in": ['${context_type:none}']

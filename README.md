@@ -250,7 +250,7 @@ Also during training there is a random chance that a metadata token gets replace
 
 ### Seamless long generation
 
-The context length of the model is 8.192 seconds long. This is obviously not enough to generate a full beatmap, so we have to split the song into multiple windows and generate the beatmap in small parts.
+The context length of the model is 16.384 seconds long. This is obviously not enough to generate a full beatmap, so we have to split the song into multiple windows and generate the beatmap in small parts.
 To make sure that the generated beatmap does not have noticeable seams in between windows, we use a 90% overlap and generate the windows sequentially.
 Each generation window except the first starts with the decoder pre-filled up to 50% of the generation window with tokens from the previous windows.
 We use a logit processor to make sure that the model can't generate time tokens that are in the first 50% of the generation window.
